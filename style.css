@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,700&family=Roboto&display=swap');
+
+:root {
+    --main-color: #fd4646;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    user-select: none;
+}
+
+body {
+    background: linear-gradient(to right, #362636, #ee7a45);
+}
+
+.app {
+    max-width: 740px;
+    width: 100%;
+    height: 1080px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 12%;
+}
+
+.user {
+    max-width: 300px;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to right, #362636, #161618);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.user:hover {
+    box-shadow: 4px 4px 10px rgb(82, 77, 77);
+}
+
+.user-img {
+    width: 150px;
+    height: 150px;
+    background-image: url(z.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 0.01px solid #fff;
+    margin: auto;
+}
+
+.user-name {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.user-list {
+    display: flex;
+    justify-content: center;
+}
+
+.user-item {
+    width: 25px;
+    height: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.icon {
+    fill: #fff;
+}
+
+.user-item:hover .icon {
+    fill: var(--main-color);
+    transition: 0.2s;
+}
+
+.user-contact {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.user-contact__link {
+    background: linear-gradient(to right, #c47272, #9292c5);
+    border-radius: 7px;
+    padding: 16px 0;
+}
+
+/* button */
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.button {
+    width: 220px;
+    font-size: 17px;
+    color: #020202;
+    text-decoration: none;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 0 50px;
+    z-index: 1;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.button::after, .button::before {
+    content:'';
+    background: linear-gradient(to right, #fd4646, #37373f);
+    height: 50%;
+    width: 0;
+    position: absolute;
+    transition: 0.3s cubic-bezier(
+        .785, .135, .15, .86
+        );
+    -webkit-transition: 0.3s cubic-bezier(
+        785, .135, .15, .86
+        );
+    z-index: -1;
+}
+
+.button:hover::before {
+    width: 100%;
+    right: 0;
+    left: auto;
+}
+
+.button::before {
+    top: 0;
+    left: 0;
+    right: auto;
+}
+
+.button:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+.button::after {
+    bottom: 0;
+    right: 0;
+    left: auto;
+}
+
+.user-contact__link:hover {
+    color: rgb(230, 204, 211);
+}
