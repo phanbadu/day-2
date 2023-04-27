@@ -14,13 +14,14 @@
 }
 
 body {
-    background: linear-gradient(to right, #362636, #ee7a45);
+    background: linear-gradient(to bottom, #d39ad3, #db8258);
+    position: relative;
 }
 
 .app {
     max-width: 740px;
     width: 100%;
-    height: 1080px;
+    height: 100vh;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -49,6 +50,13 @@ body {
     border-radius: 50%;
     border: 0.01px solid #fff;
     margin: auto;
+    transition: 0.3s;
+}
+
+.user-img:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+    border-radius: 10px;
 }
 
 .user-name {
@@ -118,6 +126,7 @@ body {
     z-index: 1;
     overflow: hidden;
     text-transform: capitalize;
+    box-shadow: 0 0 4px #3f3e3e;
 }
 
 .button::after, .button::before {
@@ -161,4 +170,14 @@ body {
 
 .user-contact__link:hover {
     color: rgb(230, 204, 211);
+}
+
+.next {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    background: linear-gradient(rgb(138, 67, 67), rgb(138, 138, 224));
+    border-radius: 10px;
+    width: 170px;
+    color: #fff;
 }
